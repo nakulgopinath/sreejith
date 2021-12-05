@@ -1,0 +1,285 @@
+:root {
+  --primary-color: #ef8f6c;
+  --secondary-color: #28313e;
+  --font-color: #050a0f;
+  --bg-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] {
+  --primary-color: #7695be;
+  --secondary-color: #faefed;
+  --font-color: #f3f4f7;
+  --bg-color: #050a0f;
+  --shadow-color: rgba(250, 239, 237, 0.1);
+}
+
+.atl {
+  padding: 170px 0px 25px;
+}
+h3 {
+  font-size: 25px;
+  font-family: "Palanquin Dark", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 0px;
+}
+.atlcreds,
+.btl {
+  font-size: 12px;
+  font-family: korolev, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.atlcreds p,
+.btl p {
+  margin: 5px;
+  font-weight: 400;
+}
+.role {
+  font-size: 12px;
+  color: var(--primary-color);
+}
+
+.atl ol {
+  margin: 15px 0px 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.spacer {
+  font-size: 15px;
+  font-weight: 400;
+  display: inline;
+  color: var(--primary-color);
+}
+.specs li {
+  font-size: 12px;
+  font-family: korolev, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  display: inline;
+  margin: 0px 5px;
+  padding: 0px;
+}
+
+.credits {
+  padding: 50px 10%;
+}
+.video-player-container {
+  align-items: center;
+  text-align: center;
+}
+.video-player {
+  width: 100%;
+  height: calc(35.25vw);
+}
+.logline {
+  font-size: 12px;
+  font-family: korolev, sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 20%;
+  color: var(--primary-color);
+}
+
+.buttons,
+.prevnext {
+  padding: 50px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 15px;
+  font-family: "Palanquin Dark", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  color: var(--primary-color);
+  width: 100%;
+  cursor: pointer;
+}
+.buttons div,
+.prevnext a {
+  width: 33.33%;
+}
+.back,
+.prev {
+  text-align: left;
+}
+.projects,
+.close {
+  text-align: center;
+}
+.forward,
+.next {
+  text-align: right;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 3px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 1px;
+}
+
+.column img {
+  margin-top: 2px;
+  vertical-align: middle;
+  width: 100%;
+}
+.movie {
+  margin: 0px 0px 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .column {
+    flex: 33.33%;
+    max-width: 33.33%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 1%;
+  overflow: none;
+  background-color: var(--bg-color);
+}
+.lightbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.mySlides img {
+  max-height: 80vh;
+  max-width: 100%;
+}
+.prevnext {
+  font-size: 17px;
+  position: absolute;
+  bottom: 2%;
+  align-items: center;
+  padding: 0 5%;
+}
+.close {
+  font-size: 30px;
+}
+
+.mySlides {
+  display: none;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 var(--shadow-color);
+  cursor: pointer;
+}
+
+/*media queries*/
+@media screen and (max-width: 600px) {
+  .atl {
+    padding: 225px 5% 15px;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  .atlcreds p {
+    font-size: 1.25em;
+  }
+  .atlcreds {
+    padding: 10px 0px;
+  }
+  .specs li,
+  .spacer {
+    font-size: 0.9em;
+  }
+  .atl ol {
+    flex-direction: column;
+  }
+  .spacer {
+    transform: rotate(90deg);
+  }
+  .row,
+  .column {
+    padding: 0px;
+  }
+  .column img {
+    margin: 1px 0px 0px;
+  }
+  .credits {
+    padding: 20px 10%;
+  }
+  .buttons {
+    padding: 50px 5% 35px;
+    font-size: 0.95em;
+  }
+  .logline {
+    padding: 0px 0px 10px;
+    font-size: 0.75em;
+  }
+  .btl {
+    font-size: 1em;
+  }
+  .prev,
+  .next {
+    font-size: 30px;
+  }
+  .close {
+    font-size: 45px;
+  }
+  .modal {
+    padding: 0px;
+  }
+}
